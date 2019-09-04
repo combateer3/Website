@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <p>
+            This website is developed by Scott Corbat, a student at Michigan Technological University.<br>
+            It makes use of several docker containers running on a homemade server PC.  Webpages are designed 
+            using html, css, and flask-bootstrap.  A Traefik container provides a reverse proxy service and automated 
+            SSL certificates.
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Service</th>
+                    <th scope="col">Version/Tag</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><a href="https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/">Flask-UWSGI-Nginx</a></th>
+                    <td>python3.6</td>
+                    <td>My docker container is built on this one to use flask to serve webpages behind UWSGI for heavier server loads and Nginx as a reverse proxy.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="https://hub.docker.com/_/nextcloud/">Nextcloud</a></th>
+                    <td>latest</td>
+                    <td>A self-hosted storage solution that can be accessed from anywhere, including a mobile application.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="https://hub.docker.com/_/traefik">Traefik</a></th>
+                    <td>latest</td>
+                    <td>A reverse proxy for docker containers.  Also provides automated SSL certification.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="https://hub.docker.com/_/mariadb">MariaDB</a></th>
+                    <td>latest</td>
+                    <td>The database connected to the Nextcloud container.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href="https://www.minecraft.net/en-us/download/server/">Minecraft Server</a></th>
+                    <td>1.12.2 Modded</td>
+                    <td>A self-hosted server for the popular game Minecraft Java Edition.  Address is 'mc.scottcorbat.com'</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <div class="jumbotron">
+            <h3>Contact Information</h3><br>
+            Name: Scott Corbat<br>
+            Phone: 586-404-5068<br>
+            Email: stcorbat@mtu.edu
+        </div>
+
+    </div>
+{% endblock %}

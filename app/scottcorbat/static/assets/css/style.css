@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+}
+
+#websiteLogo {
+    height:100px;
+    width:100px;
+}
+
+#websiteTitle {
+    font-size: 6em;
+    vertical-align: middle;
+    font-family: 'Manjari', sans-serif;
+    padding-top: 10px;
+}
+
+#buttonBar {
+    padding-bottom: 2em;
+}
+
+.list-group {
+    display: inline-block;
+}

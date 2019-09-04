@@ -1,0 +1,52 @@
+{% extends "bootstrap/template.html" %}
+{% from 'bootstrap/nav.html' import render_nav_item %}
+
+{% block styles %}
+{{ super() }}
+<link href="../static/assets/css/style.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}<title>Scott's Forum</title>{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg" width="50" height="50" alt="">
+                Scott Corbat
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {{ render_nav_item('index', 'Home') }}
+                    {{ render_nav_item('cloud', 'Cloud Storage') }}
+
+                    <!--No function to render nav dropdown menu in Bootstrap-Flask, so must be done manually-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Quotes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="quotes1984">1984</a>
+                            <a class="dropdown-item" href="quotesBNW">Brave New World</a>
+                        </div>
+                    </li>
+
+                    {{ render_nav_item('about', 'About') }}
+                </ul>
+            </div>
+    </nav>
+
+    <div class="container">
+        <div align="center">
+            <h2 id="websiteTitle">Scott's Forum</h2>
+
+            <hr class="my-4">
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}  
+{% endblock %}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <title>Resourceful</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="../static/assets/css/style.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzp+bzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="page-header row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <img id="websiteLogo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATEhISEhMVFRUWEhgWEhYVFxYVFhUWFRUWFx0VFxUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwIDBAUGCAH/xAA/EAABAwIDBQUFBwQBAwUAAAABAAIDBBEFITEGEkFhcQcTIlGBIzJCUpEUQ2JjcqGxU4LB0fEzkuEIJKLC0v/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCcUREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBEXxxAzOQ4oPqpkkDRdxAHmTYKOdt+1+io96OC1TOMrNNo2H8UnE8h+yhupxjGccqNxpc78uO7IY2ni7PIcySUHqmKVrhdrg4eYII/ZVrzZL2fbQUVn00rngC/sJTkfLcdZX6PtWx2hIZWQ94Bl7eN0bj0kbYE+hQejEUO4R2+UrrCppZYvN0bmytHMghpHpdSFgG2mHVgH2epjcfkJ3Xjqx1ig6BERAREQEREBERAREQEREBERAREQEREBERARaDavbGiw9m9UygOt4Y2+KR3Ro/k5KAduO1yurd6OEmmgNxusPtHj8cmo6NsPO6CYNt+1SgoA5jT9on4RxkWafxv0b+55KCNqO0XE69xa+UsjcbCGG7Wchlm49SVibJ7GVmIO9k20YPjmfcMGfA/EeQU2bI9n9Bh9pLd/UD7x4yYfy2aN6m56IOD2K7H5Zg2auc6CM5iJtu+cOd8oweeamPC6KmpYxDTRNjYODePNzjm88yvss7nan0Vp8lkGTJWkaWWDXTMlY6OaNkrHZOa8XBHQq0+RWnFBHe0XZRTvJfQy90f6MxJb0bLqB+q/VR5jOy1fRnelhe0DSRviZ1D25BegigmIyBNuI4HqDkghHZ7tNxaksGVBkYPu5h3jfqfEPQ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84x+zh/tdFi2Nw0/vHefwYNf7j8IQbmWpNiXENaBcm9gB5krlMY2uY27YPG75z7o6DitLJU1uISCKJj3knwxRgkdTb+SpU2H7D/dlxJ3MU8Z05SSDXo36lBFWDYHX4lNuwxvmflvPOTGD8Tzk0cvopx2I7F6Wn3Za0iolyO59y09NX+uWWikvDcOhp42xQRtjY3RrAAP+VlIKY42tAa0AACwAFgAOAA0CqREBERAREQEREBERAREQEREBERAREQEREBWK2jilYY5WNew6tcA4H0KvogiLa/sPppt6Shf3Emvduu6EnyuPEz0v0UN7R7EYjREiop3hvCRvjjPMPbkPWxXsFUvYCCCAQdQcwfRB4qwupmY+0N9947sWF3HeIyaPO9lLOyHYfPKRLiMndtOZiYd6V3Hxv0b6XPRTFS7IYdHN9oZSwtlvcPDACD5jyK3iDV4Bs9SUbO7poWxjiQPE79TjmVtERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH/9k=">
+                <span id="websiteTitle">Resourceful</span>
+                <hr class="my-4">
+                </div>
+            </div>
+            
+
+            <div id="buttonBar">
+                <a href="https://cloud.scottcorbat.com" class="btn btn-primary btn-lg" role="button">Cloud Storage</a>
+            </div>
+
+            <div class="jumbotron">
+                <p>"I've already trod on dangerous ground, we're on dangerous ground right now; because of our secrets and our lies. 
+                     They're practically what define us!  When the truth offends, we lie and lie until we can no longer remember it is even there, 
+                    but it is still there.  Every lie we tell incurs a debt to the truth.  Sooner or later that debt is paid.  That is how 
+                    an RBMK reactor core explodes.  Lies.<br><br>--Legasov
+                </p>
+
+                <a href="https://www.youtube.com/watch?v=zKR84md0aXk" class="btn btn-outline-primary" role="button">Source Clip</a>
+            </div>
+
+            <div class="jumbotron">
+                <p>"I did what I did for the good of the realm."<br>
+                    "The realm...do you know what the realm is?  It's the thousand blades of Aegon's enemies; a story we agree to tell each 
+                    other over and over, til we forget that its a lie."<br>
+                    "But what do we have left when we abandon the lie?  Chaos, a gaping pit waiting to swallow us all."<br>
+                    "Chaos isn't a pit.  <i>Chaos is a ladder.</i>  Many who try to climb it fail, never get to try again.  The fall 
+                    breaks them.  And some are given a chance to climb, but they refuse.  They cling to the realm, or the gods, or love.  
+                    Illusions.  Only the ladder is real.  The climb is all there is."<br><br>--Conversation between Lord Varys and Petyr 
+                    "Littlefinger" Baelish
+                </p>
+
+                <a href="https://www.youtube.com/watch?v=PxlIraEV8n4" class="btn btn-outline-primary" role="button">Source Clip</a>
+            </div>
+
+            <div class="jumbotron">
+                <p>
+                    "I've known braver souls then you Khomyuk.  Men who had their moment and did nothing, because when it's your life 
+                    and the lives of everyone you love, your moral commission doesn't mean anything.  It leaves you.  And all you want 
+                    at that moment, is not to be shot."<br>
+                    "Do you know the name Vasily Ignatenko?"<br>
+                    "No."<br>
+                    "He was a fireman.  He died two weeks after the accident.  I've been looking in on his widow.  She gave birth, a girl.  
+                    The baby lived for four hours.  They said the radiation would've killed the mother, but the baby absorbed it instead.  
+                    Her baby.  We live in a country where children have to die to save their mothers.  To hell with your deal, and to hell 
+                    with our lives.  Someone has to start telling the truth."<br><br>--Conversation between Khomyuk and Shcherbina
+                </p>
+
+                <a href="https://www.youtube.com/watch?v=KLDi3P5dhqo" class="btn btn-outline-primary" role="button">Source Clip</a>
+            </div>
+
+            <div class="jumbotron">
+                <p>
+                    "Tell him who it belonged to."<br>
+                    "The princess Shireen."<br>
+                    "Tell him what you did to her...TELL HIM!"<br>
+                    "We burned her at the stake."<br>
+                    "Why."<br>
+                    "The army was strep, the horses were dying.  It was the only way."<br>
+                    "YOU BURNED A LITTLE GIRL ALIVE!"<br>
+                    "I only do what my lord commands!"<br>
+                    "If he commands you to burn children, your lord is evil!"<br>
+                    "We are standing here because of him.  Jon Snow is alive, because the lord willed it."<br>
+                    "I loved that girl like she was my own.  She was good, she was kind, and you KILLED HER!"<br>
+                    "So did her father.  So did her mother.  Her own blood knew it was the only way!"<br>
+                    "The only way for what?!  They all died anyway!  You told everyone Stannis was the one, you had him believing it, all of them fooled.  And you lied."<br>
+                    "I didn't lie!  I was wrong."<br>
+                    "Aye.  You were wrong.  How many died, because you were wrong?"
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
