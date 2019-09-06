@@ -12,9 +12,13 @@ def index():
 def cloud():
     return redirect('https://cloud.scottcorbat.com')
 
-@app.route("/quotes")
-def quotes():
-    return render_template('quotes.html')
+@app.route("/quotes1984")
+def quotes1984():
+    return render_template('quotes1984.html')
+
+@app.route("/quotesBNW")
+def quotesBNW():
+    return render_template('quotesBNW.html')
 
 @app.route("/about")
 def about():

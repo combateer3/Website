@@ -8,7 +8,7 @@ body, html {
 }
 
 #websiteTitle {
-    font-size: 6em;
+    font-size: 4em;
     vertical-align: middle;
     font-family: 'Manjari', sans-serif;
     padding-top: 10px;
@@ -20,4 +20,12 @@ body, html {
 
 .list-group {
     display: inline-block;
+}
+
+.status-online {
+    color: green;
+}
+
+.status-offline {
+    color: red;
 }
