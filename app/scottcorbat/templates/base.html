@@ -4,14 +4,15 @@
 {% block styles %}
 {{ super() }}
 <link href="../static/assets/css/style.css" rel="stylesheet">
+<link rel="icon" type="image/gif" href="../static/assets/images/husky-icon.png">
 {% endblock %}
 
 {% block title %}<title>Scott's Forum</title>{% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg" width="50" height="50" alt="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" style="font-size: 32px;">
+                <img src="https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg" width="50" height="50" alt="" class="d-inline-block align-top">
                 Scott Corbat
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,14 @@
                     </li>
 
                     {{ render_nav_item('about', 'About') }}
+                </ul>
+
+                <!-- Right side of navbar -->
+                <ul class="navbar-nav navbar-right">
+                    {{ render_nav_item('mcserver', 'Minecraft Server') }}
+                    <li class="nav-item" style="padding-left:20px;">
+                        <a href="" class="btn btn-outline-info">Contact</a>
+                    </li>
                 </ul>
             </div>
     </nav>

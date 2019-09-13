@@ -1,25 +1,27 @@
-body, html {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Dosis|Montserrat|Quicksand&display=swap');
+
+* {
+    font-family: 'Crimson Text', sans-serif;
+    font-size: 18px;
 }
 
-#websiteLogo {
-    height:100px;
-    width:100px;
+body, html {
+    height: 100%;
 }
 
 #websiteTitle {
     font-size: 4em;
     vertical-align: middle;
-    font-family: 'Manjari', sans-serif;
+    /*font-family: 'Manjari', sans-serif;*/
     padding-top: 10px;
-}
-
-#buttonBar {
-    padding-bottom: 2em;
 }
 
 .list-group {
     display: inline-block;
+}
+
+.container {
+    padding-top: 2em;
 }
 
 .status-online {

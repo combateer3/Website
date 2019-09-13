@@ -2,9 +2,10 @@
 
 {% block content %}
     <div class="container">
+        <h2>The Services</h2>
+
         <p>
-            This website is developed by Scott Corbat, a student at Michigan Technological University.<br>
-            It makes use of several docker containers running on a homemade server PC.  Webpages are designed 
+            This website makes use of several docker containers running on a homemade server PC.  Webpages are designed 
             using html, css, and flask-bootstrap.  A Traefik container provides a reverse proxy service and automated 
             SSL certificates.
         </p>
@@ -40,20 +41,106 @@
                 </tr>
                 <tr>
                     <th scope="row"><a href="https://www.minecraft.net/en-us/download/server/">Minecraft Server</a></th>
-                    <td>1.12.2 Modded</td>
-                    <td>A self-hosted server for the popular game Minecraft Java Edition.  Address is 'mc.scottcorbat.com'</td>
+                    <td>1.14.4</td>
+                    <td>A self-hosted server for the popular game Minecraft Java Edition.  More info <a href="mcserver">here</a>.</td>
                 </tr>
             </tbody>
         </table>
 
         <hr>
 
-        <div class="jumbotron">
-            <h3>Contact Information</h3><br>
-            Name: Scott Corbat<br>
-            Phone: 586-404-5068<br>
-            Email: stcorbat@mtu.edu
-        </div>
+        <h2>The Server</h2>
 
+        <p>
+            All services are hosted on a low budget computer built by myself for a few reasons.  I enjoy building computers as a 
+            pasttime.  This also removes dependencies on third parties, with the exception of my ISP.  Finally, it gives me experience
+            setting up my own web server from scratch.
+        </p>
+
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Part</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Quick Specs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Motherboard</th>
+                        <td><a href="https://www.amazon.com/gp/product/B01N9BY912/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1">ASRock B250M-HDV</a></td>
+                        <td>
+                            <ul>
+                                <li>Micro ATX Form Factor</li>
+                                <li>LGA1151 Socket (6th gen Intel support)</li>
+                                <li>M.2 Slot</li>
+                                <li>Dual Channel DDR4 Memory</li>
+                                <li>USB 3.0 and SATA3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Processor</th>
+                        <td><a href="https://ark.intel.com/content/www/us/en/ark/products/90729/intel-core-i3-6100-processor-3m-cache-3-70-ghz.html">Intel Core i3-6100</a></td>
+                        <td>
+                            <ul>
+                                <li>3.7 GHz</li>
+                                <li>2 cores/4 threads</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Memory</a></th>
+                        <td><a href="https://www.amazon.com/gp/product/B06XNRXCV6/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1">Kingston Technology HyperX Fury Black</a></td>
+                        <td>
+                            <ul>
+                                <li>8 GB</li>
+                                <li>DDR4</li>
+                                <li>2666 MHz</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Power Supply Unit</th>
+                        <td><a href="https://www.amazon.com/gp/product/B07BFJ91TY/ref=ppx_yo_dt_b_asin_title_o03_s02?ie=UTF8&psc=1">Thermaltake Smart 430W</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Storage</th>
+                        <td><a href="https://www.amazon.com/gp/product/B0795YN91V/ref=ppx_yo_dt_b_asin_title_o03_s02?ie=UTF8&psc=1">HP EX920</a></td>
+                        <td>
+                            <ul>
+                                <li>M.2 Form</li>
+                                <li>256 GB</li>
+                                <li>Solid State Drive</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Case</th>
+                        <td><a href="https://www.amazon.com/gp/product/B00PDDMN6S/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1">Thermaltake Core V21</a></td>
+                        <td>
+                            <ul>
+                                <li>Front Intake Fan 200mm</li>
+                                <li>Micro ATX/Mini ITX</li>
+                                <li>Modular Sides</li>
+                                <li>2 USB 3.0</li>
+                                <li>Ventilation on all sides</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Operating System</th>
+                        <td><a href="https://ubuntu.com/server">Ubuntu Server 18.04 LTS</a></td>
+                        <td>
+                            <ul>
+                                <li>Headless Ubuntu Distro</li>
+                                <li>Free</li>
+                                <li>Light on resources</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
 {% endblock %}

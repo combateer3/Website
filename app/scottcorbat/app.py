@@ -12,6 +12,10 @@ def index():
 def cloud():
     return redirect('https://cloud.scottcorbat.com')
 
+@app.route("/mcserver")
+def mcserver():
+    return render_template('mcserver.html')
+
 @app.route("/quotes1984")
 def quotes1984():
     return render_template('quotes1984.html')
