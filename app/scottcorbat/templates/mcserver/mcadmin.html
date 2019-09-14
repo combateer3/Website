@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Admin</h1>
+    <p class="read-text">Admins are high-level staff to solve large scale issues and report to the owner.</p>
+    <h3>Current Members</h3>
+    <ul class="list-group w-25">
+        <li class="list-group-item">C_KOCIS</li>
+        <li class="list-group-item">veto88</li>
+        <li class="list-group-item">Deucecanady</li>
+    </ul>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Command</th>
+                <th scope="col">Syntax</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">ban</th>
+                <td>/ban &lt;player&gt; [reason]</td>
+                <td>Bans a player.</td>
+            </tr>
+            <tr>
+                <th scope="row">unban</th>
+                <td>/unban &lt;player&gt; [reason]</td>
+                <td>Unbans a player.</td>
+            </tr>
+            <tr>
+                <th scope="row">banip</th>
+                <td>/banip &lt;address&gt;</td>
+                <td>Ban an IP.</td>
+            </tr>
+            <tr>
+                <th scope="row">unbanip</th>
+                <td>/unbanip &lt;address&gt;</td>
+                <td>Unban an IP.</td>
+            </tr>
+            <tr>
+                <th scope="row">break</th>
+                <td>/break</td>
+                <td>Breaks the block you are looking at.</td>
+            </tr>
+            <tr>
+                <th scope="row">broadcast</th>
+                <td>/broadcast &lt;message&gt;</td>
+                <td>Broadcasts a message to the entire server.</td>
+            </tr>
+            <tr>
+                <th scope="row">eco</th>
+                <td>/eco &lt;give|take|set|reset&gt; &lt;player&gt; &lt;amount&gt;</td>
+                <td>Manages the server economy.</td>
+            </tr>
+            <tr>
+                <th scope="row">gamemode</th>
+                <td>/gamemode &lt;survival|creative|adventure|spectator&gt; [player]</td>
+                <td>Change player gamemode.</td>
+            </tr>
+            <tr>
+                <th scope="row">exp</th>
+                <td>/exp [show|set|give] [playername [amount]]</td>
+                <td>Give, set, or look at a player's exp.</td>
+            </tr>
+            <tr>
+                <th scope="row">give</th>
+                <td>/give &lt;player&gt; &lt;item|numeric&gt; [amount [itemmeta]]</td>
+                <td>Give a player an item.</td>
+            </tr>
+            <tr>
+                <th scope="row">kill</th>
+                <td>/kill &lt;player&gt;</td>
+                <td>Kills specified player.</td>
+            </tr>
+            <tr>
+                <th scope="row">setjail</th>
+                <td>/setjail &lt;jailname&gt;</td>
+                <td>Creates a jail.</td>
+            </tr>
+            <tr>
+                <th scope="row">deljail</th>
+                <td>/deljail &lt;jailname&gt;</td>
+                <td>Removes a jail.</td>
+            </tr>
+            <tr>
+                <th scope="row">jail</th>
+                <td>/jail &lt;player&gt; &lt;jailname&gt; [datediff]</td>
+                <td>Jails/Unjails a player, TPs them to specified jail.</td>
+            </tr>
+            <tr>
+                <th scope="row">setwarp</th>
+                <td>/setwarp &lt;warp&gt;</td>
+                <td>Creates a new warp.</td>
+            </tr>
+            <tr>
+                <th scope="row">delwarp</th>
+                <td>/delwarp &lt;warp&gt;</td>
+                <td>Removes a warp.</td>
+            </tr>
+            <tr>
+                <th scope="row">warp</th>
+                <td>/warp &lt;pagenumber|warp&gt; [player]</td>
+                <td>List all warps or warp to specified location.</td>
+            </tr>
+            <tr>
+                <th scope="row">socialspy</th>
+                <td>/socialspy [player] [on|off]</td>
+                <td>Toggles if you can see msg/mail commands in chat.</td>
+            </tr>
+            <tr>
+                <th scope="row">speed</th>
+                <td>/speed [type] &lt;speed&gt; [player]</td>
+                <td>Change your speed limits.</td>
+            </tr>
+            <tr>
+                <th scope="row">time</th>
+                <td>/time [day|night|dawn|17:30|4pm|4000ticks] [worldname|all]</td>
+                <td>Display/Change the world time.</td>
+            </tr>
+            <tr>
+                <th scope="row">vanish</th>
+                <td>/vanish [player] [on|off]</td>
+                <td>Hide yourself from other players.</td>
+            </tr>
+            <tr>
+                <th scope="row">weather</th>
+                <td>/weather &lt;storm/sun&gt; [duration]</td>
+                <td>Sets the weather.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

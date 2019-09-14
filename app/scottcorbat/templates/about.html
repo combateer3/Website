@@ -4,7 +4,7 @@
     <div class="container">
         <h2>The Services</h2>
 
-        <p>
+        <p class="read-text">
             This website makes use of several docker containers running on a homemade server PC.  Webpages are designed 
             using html, css, and flask-bootstrap.  A Traefik container provides a reverse proxy service and automated 
             SSL certificates.
@@ -22,7 +22,10 @@
                 <tr>
                     <th scope="row"><a href="https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/">Flask-UWSGI-Nginx</a></th>
                     <td>python3.6</td>
-                    <td>My docker container is built on this one to use flask to serve webpages behind UWSGI for heavier server loads and Nginx as a reverse proxy.</td>
+                    <td>My docker container is built on this one to use flask to serve webpages behind UWSGI for heavier server 
+                        loads and Nginx as a reverse proxy.  Source code for my Flask application can be found on my 
+                        <a href="https://github.com/combateer3/Website">GitHub</a>.
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row"><a href="https://hub.docker.com/_/nextcloud/">Nextcloud</a></th>
@@ -51,7 +54,7 @@
 
         <h2>The Server</h2>
 
-        <p>
+        <p class="read-text">
             All services are hosted on a low budget computer built by myself for a few reasons.  I enjoy building computers as a 
             pasttime.  This also removes dependencies on third parties, with the exception of my ISP.  Finally, it gives me experience
             setting up my own web server from scratch.

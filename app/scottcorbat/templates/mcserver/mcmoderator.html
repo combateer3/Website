@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Moderator</h1>
+    <p class="read-text">Moderators are mid-level staff to handle common issues and disputes.</p>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Command</th>
+                <th scope="col">Syntax</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">back</th>
+                <td>/back</td>
+                <td>Teleports you to your location prior to tp/warp.</td>
+            </tr>
+            <tr>
+                <th scope="row">gc</th>
+                <td>/gc [all]</td>
+                <td>Reports memory, uptime and tick info.</td>
+            </tr>
+            <tr>
+                <th scope="row">getpos</th>
+                <td>/getpos [player]</td>
+                <td>Get current position or that of another player.</td>
+            </tr>
+            <tr>
+                <th scope="row">hat</th>
+                <td>/hat [remove]</td>
+                <td>Equip held item as hat.</td>
+            </tr>
+            <tr>
+                <th scope="row">heal</th>
+                <td>/heal [player]</td>
+                <td>Heals yourself or another player.</td>
+            </tr>
+            <tr>
+                <th scope="row">invsee</th>
+                <td>/invsee &lt;player&gt;</td>
+                <td>See the inventory of other players.</td>
+            </tr>
+            <tr>
+                <th scope="row">kick</th>
+                <td>/kick &lt;player&gt; [reason]</td>
+                <td>Kicks a specified player with a reason.</td>
+            </tr>
+            <tr>
+                <th scope="row">mute</th>
+                <td>/mute &lt;player&gt; [datediff]</td>
+                <td>Mutes or unmutes another player.</td>
+            </tr>
+            <tr>
+                <th scope="row">tempban</th>
+                <td>/tempban &lt;player&gt; &lt;datediff&gt; &lt;reason&gt;</td>
+                <td>Temporarily ban a player.</td>
+            </tr>
+            <tr>
+                <th scope="row">tpa</th>
+                <td>/tpa &lt;player&gt;</td>
+                <td>Request to teleport to specified player.</td>
+            </tr>
+            <tr>
+                <th scope="row">tpaaccept</th>
+                <td>/tpaccept [otherplayer]</td>
+                <td>Accepts a teleport request.</td>
+            </tr>
+            <tr>
+                <th scope="row">tpacancel</th>
+                <td>/tpacancel [player]</td>
+                <td>Cancel all outstanding tp requests, or cancel with a specific player.</td>
+            </tr>
+            <tr>
+                <th scope="row">tpdeny</th>
+                <td>/tpdeny</td>
+                <td>Reject a teleport request.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -14,7 +14,19 @@ def cloud():
 
 @app.route("/mcserver")
 def mcserver():
-    return render_template('mcserver.html')
+    return render_template('mcserver/mcserver.html')
+
+@app.route("/mcserver/member")
+def mcmember():
+    return render_template('mcserver/mcmember.html')
+
+@app.route("/mcserver/moderator")
+def mcmoderator():
+    return render_template('mcserver/mcmoderator.html')
+
+@app.route("/mcserver/admin")
+def mcadmin():
+    return render_template('mcserver/mcadmin.html')
 
 @app.route("/quotes1984")
 def quotes1984():
@@ -27,6 +39,10 @@ def quotesBNW():
 @app.route("/about")
 def about():
     return render_template('about.html')
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
 
 @app.route("/legacy")
 def legacy():
