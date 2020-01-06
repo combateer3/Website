@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+<h1>Register</h1>
+
+<p class="alert alert-warning">
+    <b style="font-size: 24px;">Important Notice!</b><br>
+    Since this is a solo developed website, I cannot guarantee the safety of any of your passwords.
+    I have followed a guide for setting up a secure database using
+    <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">this</a>
+    guide, but I would strongly recommend using a totally different password for this website than you use
+    anywhere else.  It is also possible that in development I may occasionally wipe the databases, so do not
+    expect your data to remain here forever.
+</p>
+
+<div class="jumbotron">
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}<br>
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(size=64) }}<br>
+        {% for error in form.email.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}<br>
+        <small class="form-text text-muted">Password must be at least 8 characters</small>
+        {% for error in form.password.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.repeat_pass.label }}<br>
+        {{ form.repeat_pass(size=32) }}<br>
+        {% for error in form.repeat_pass.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+</div>
+
+</div>
+{% endblock %}

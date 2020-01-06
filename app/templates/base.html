@@ -41,13 +41,31 @@
                 <!-- Right side of navbar -->
                 <ul class="navbar-nav navbar-right">
                     {{ render_nav_item('mcserver', 'Minecraft Server') }}
+
+                    {% if current_user.is_anonymous %}
                     <li class="nav-item" style="padding-left:20px;">
-                        <a href="contact" class="btn btn-outline-info">Contact</a>
+                        <a href="{{ url_for('login') }}" class="btn btn-outline-info">Login</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item" style="padding-left:20px;">
+                        <a href="{{ url_for('logout') }}" class="btn btn-outline-info">Logout</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
     </nav>
 {% endblock %}
+
+<!-- Render any flashed messages if there are some -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
 
 {% block content %}
 <div class="container">
