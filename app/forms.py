@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+from wtforms import StringField, PasswordField, SubmitField, TextAreaField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Length
 
 from .models import User
 
@@ -31,3 +31,8 @@ class RegistrationForm(FlaskForm):
     def validate_password(self, password):
         if len(password.data) < 8:
             raise ValidationError('Password must be at least 8 characters')
+
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Your post here', validators=[DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')

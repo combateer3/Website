@@ -1,6 +1,10 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
+<!-- load flashed error messages -->
+{{ super() }}
+
+
 <div class="container">
 
 <h1>Sign In</h1>

@@ -15,6 +15,16 @@ Bootstrap(app)
 # import down here because the models file requires the db object to be created
 from .models import User
 from .forms import LoginForm, RegistrationForm
+from app.blueprints.blog import blog
+from app.blueprints.mcserver import mcserver
+
+# register blueprints
+app.register_blueprint(mcserver, url_prefix='/mcserver')
+app.register_blueprint(blog, url_prefix='/blog')
+
+# set login view for login_required decorators
+login.login_view = 'login'
+
 
 @app.route("/")
 @app.route("/index")
@@ -74,26 +84,6 @@ def logout():
 @app.route("/cloud")
 def cloud():
     return redirect('https://cloud.scottcorbat.com')
-
-
-@app.route("/mcserver")
-def mcserver():
-    return render_template('mcserver/mcserver.html')
-
-
-@app.route("/mcserver/member")
-def mcmember():
-    return render_template('mcserver/mcmember.html')
-
-
-@app.route("/mcserver/moderator")
-def mcmoderator():
-    return render_template('mcserver/mcmoderator.html')
-
-
-@app.route("/mcserver/admin")
-def mcadmin():
-    return render_template('mcserver/mcadmin.html')
 
 
 @app.route("/quotes1984")

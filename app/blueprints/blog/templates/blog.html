@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+    <h1>Blog Posts</h1>
+    <a href="post" class="btn btn-primary">Create Post!</a>
+    <hr>
+
+{% for post in posts %}
+<div class="jumbotron">
+    {% include '_post.html' %}
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

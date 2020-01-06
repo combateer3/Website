@@ -35,18 +35,23 @@
                         </div>
                     </li>
 
+                    {{ render_nav_item('blog.blog_home', 'Blog') }}
+                    {{ render_nav_item('mcserver.mcserver_home', 'Minecraft Server') }}
                     {{ render_nav_item('about', 'About') }}
                 </ul>
 
                 <!-- Right side of navbar -->
                 <ul class="navbar-nav navbar-right">
-                    {{ render_nav_item('mcserver', 'Minecraft Server') }}
-
                     {% if current_user.is_anonymous %}
                     <li class="nav-item" style="padding-left:20px;">
                         <a href="{{ url_for('login') }}" class="btn btn-outline-info">Login</a>
                     </li>
                     {% else %}
+                        <!-- display hi message -->
+                    <li class="nav-item nav-link active">
+                        Hi, {{ current_user.username }}
+                    </li>
+
                     <li class="nav-item" style="padding-left:20px;">
                         <a href="{{ url_for('logout') }}" class="btn btn-outline-info">Logout</a>
                     </li>
@@ -56,23 +61,18 @@
     </nav>
 {% endblock %}
 
-<!-- Render any flashed messages if there are some -->
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
 
+<!-- IMPORTANT NOTE: to display flashed messages, the template must call { super() }, because
+for some reason flask isn't rendering anything outside of the { block ____} calls-->
 {% block content %}
-<div class="container">
-        <div align="center">
-            <h1 id="websiteTitle">Scott's Forum</h1>
-
-            <hr class="my-4">
+    <!-- Render any flashed messages if there are some -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="container">
+        {% for message in messages %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
         </div>
-</div>
+    {% endif %}
+    {% endwith %}
 {% endblock %}
