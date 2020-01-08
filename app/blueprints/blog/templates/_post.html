@@ -1,6 +1,14 @@
 <!-- this acts as a formula for displaying a post from a user -->
 <hr>
 <h3>{{ post.title }}</h3>
+
+<!-- Only show delete buttons for posts of the logged in user, the weird syntax is required to filter the variables to ints++ -->
+{% if current_user.get_id()|int() == post.author.id|int() %}
+<form action="delete_post" method="post" style="float: right;">
+    <input type="hidden" value="{{ post.id }}" name="post_del">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+</form>
+{% endif %}
 By: {{ post.author.username }}<br>
 Posted: {{ post.timestamp }}<br>
 <p>{{ post.body }}</p>

@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
+<div class="row">
+<div id="blog-left" class="col-md-8">
 
     <h1>Blog Posts</h1>
-    <a href="post" class="btn btn-primary">Create Post!</a>
 
 {% for post in posts %}
     {% include '_post.html' %}
 {% endfor %}
 
+</div>
+
+<div id="blog-right" class="col-md-4">
+    <a href="post" class="btn btn-secondary" id="btn-post">Create Post!</a>
+</div>
 </div>
 {% endblock %}
