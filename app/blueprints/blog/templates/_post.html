@@ -1,7 +1,6 @@
 <!-- this acts as a formula for displaying a post from a user -->
-
-<div class="jumbotron">
-    <h3>Author: {{ post.author.username }}</h3>
-    <p>Time: {{ post.timestamp }}</p>
-    <p>{{ post.body }}</p>
-</div>
+<hr>
+<h3>{{ post.title }}</h3>
+By: {{ post.author.username }}<br>
+Posted: {{ post.timestamp }}<br>
+<p>{{ post.body }}</p>

@@ -1,7 +1,8 @@
 from flask import Flask, render_template, redirect, flash, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, current_user, login_user, logout_user, login_required
+from flask_login import LoginManager, current_user, login_user, logout_user
+from flask_migrate import Migrate
 from werkzeug.urls import url_parse
 
 from .config import Config
@@ -9,6 +10,7 @@ from .config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 login = LoginManager(app)
 Bootstrap(app)
 

@@ -34,5 +34,6 @@ class RegistrationForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    post = TextAreaField('Your post here', validators=[DataRequired(), Length(min=1, max=140)])
+    title = StringField('Post title', validators=[DataRequired(), Length(min=1, max=60)])
+    post = TextAreaField('Your post here', validators=[DataRequired(), Length(min=1, max=65535)])
     submit = SubmitField('Submit')

@@ -3,16 +3,33 @@
 {% block content %}
 <div class="container">
 
+<h1>Create a post</h1>
+
+<p class="alert alert-warning">Assume your post will be seen by any age, so keep it appropriate <br>
+    I will remove inappropriate posts.
+</p>
+
 <form action="" method="post">
     {{ form.hidden_tag() }}
+    <div class="jumbotron">
+    <p>
+        {{ form.title.label }}<br>
+        {{ form.title(size=32) }}<br>
+        <small class="form-text text-muted">Max title length is 60 characters</small><br>
+        {% for error in form.title.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
     <p>
         {{ form.post.label }}<br>
-        {{ form.post(cols=32, rows=4) }}<br>
+        {{ form.post(cols=64, rows=4) }}<br>
+        <small class="form-text text-muted">Max post length is 65535 characters</small><br>
         {% for error in form.post.errors %}
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
     </p>
-    <p>{{ form.submit() }}</p>
+    <p>{{ form.submit(class_="btn btn-danger") }}</p>
+    </div>
 </form>
 
 </div>
