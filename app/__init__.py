@@ -20,6 +20,10 @@ from .forms import LoginForm, RegistrationForm
 from app.blueprints.blog import blog
 from app.blueprints.mcserver import mcserver
 
+#init the database
+db.create_all()
+db.session.commit()
+
 # register blueprints
 app.register_blueprint(mcserver, url_prefix='/mcserver')
 app.register_blueprint(blog, url_prefix='/blog')
