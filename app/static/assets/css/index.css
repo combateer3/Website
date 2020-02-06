@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #343a40;
+}
+
+.intro {
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.my-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*This width and height is a 16:9 ratio*/
+    width: 22.5vw;
+    height: 40vh;
+    margin: 5vw;
+    border-radius: 2vh;
+    transition: 0.5s;
+    background-size: 200%;
+}
+
+.my-card i, .my-card img {
+    position: absolute;
+    transition: inherit;
+}
+
+.my-card div {
+    margin: 15px;
+    color: #171a1d;
+    transition: inherit;
+    opacity: 0;
+}
+
+.my-card .card-title {
+    font-size: 32px;
+}
+
+.my-card:hover {
+    background-position: right;
+}
+
+.my-card:hover i, .my-card:hover img {
+    transform: translate(0, -120%);
+}
+
+.my-card:hover div {
+    transform: translate(0, 60%);
+    opacity: 1;
+}
+
+.about-card {
+    background-image: linear-gradient(60deg, #4370d6, #e165de, #4370d6);
+}
+
+.servers-card {
+    background-image: linear-gradient(60deg, #60a3bc, #b8e994, #60a3bc);
+}
+
+.nextcloud-card {
+    background-image: linear-gradient(60deg, #1e3799, #4a69bd, #1e3799);
+}
+
+.blog-card {
+    background-image: linear-gradient(60deg, #16a085, #2ecc71, #16a085);
+}
+
+.hide-card {
+    background-image: linear-gradient(60deg, #2980b9, #1abc9c, #2980b9);
+}
+
+.blc-card {
+    background-image: linear-gradient(60deg, #d63031, #e17055, #d63031);
+}
+
+.my-card .hide-logo {
+    /*This matches the other icons on the page*/
+    width: 90px;
+    height: 90px;
+}
+
+.service-header {
+    text-align: center;
+    left: 20vh;
+    font-size: 50px;
+    color: white;
+}

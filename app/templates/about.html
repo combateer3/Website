@@ -6,8 +6,8 @@
 
         <p class="read-text">
             This website makes use of several docker containers running on a homemade server PC.  Webpages are designed 
-            using html, css, and flask-bootstrap.  A Traefik container provides a reverse proxy service and automated 
-            SSL certificates.
+            using HTML and Bootstrap-Flask, as well as a lot of my own CSS work.
+            A Traefik container provides a reverse proxy service and automated SSL certificates.
         </p>
 
         <table class="table">
@@ -33,6 +33,11 @@
                     <th scope="row"><a href="https://hub.docker.com/_/mariadb">MariaDB</a></th>
                     <td>latest</td>
                     <td>The database connected to the Nextcloud container.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><a href=https://hub.docker.com/r/mysql/mysql-server/">MySQL</a></th>
+                    <td>latest <b style="color: red;">(Faulty)</b></td>
+                    <td>The database connected to the my blog application.  This is currently a bugged database.</td>
                 </tr>
                 <tr>
                     <th scope="row"><a href="https://www.minecraft.net/en-us/download/server/">Minecraft Server</a></th>

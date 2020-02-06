@@ -13,8 +13,9 @@ body, html {
     font-size: 22px;
 }
 
-.big-link {
-    font-size: 28px;
+.no-link-style {
+    color: inherit;
+    text-decoration: none;
 }
 
 #websiteTitle {
@@ -30,23 +31,4 @@ body, html {
 
 .container {
     padding-top: 2em;
-}
-
-#blog-left {
-    padding-top: 5vh;
-    padding-left: 5vw;
-}
-
-#blog-right {
-    padding-top: 5vh;
-    padding-right: 5vw;
-}
-
-#btn-post {
-    width: 30vh;
-    height: 20vh;
-    text-align: center;
-    margin: auto;
-    line-height: 20vh;
-    float: right;
 }

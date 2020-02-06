@@ -5,6 +5,8 @@
 {{ super() }}
 <link href="../static/assets/css/style.css" rel="stylesheet">
 <link rel="icon" type="image/gif" href="../static/assets/images/husky-icon.png">
+<!-- fontawesome icons -->
+<script src="https://kit.fontawesome.com/2f1051008b.js" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block title %}<title>Scott's Forum</title>{% endblock %}
@@ -24,7 +26,7 @@
                     {{ render_nav_item('index', 'Home') }}
                     {{ render_nav_item('cloud', 'Cloud Storage') }}
 
-                    <!--No function to render nav dropdown menu in Bootstrap-Flask, so must be done manually-->
+                    <!--No function to render nav dropdown menu in Bootstrap-Flask, so must be done manually>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Quotes
@@ -33,7 +35,7 @@
                             <a class="dropdown-item" href="quotes1984">1984</a>
                             <a class="dropdown-item" href="quotesBNW">Brave New World</a>
                         </div>
-                    </li>
+                    </li-->
 
                     {{ render_nav_item('blog.blog_home', 'Blog') }}
                     {{ render_nav_item('mcserver.mcserver_home', 'Minecraft Server') }}

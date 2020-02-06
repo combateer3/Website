@@ -1,50 +1,80 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block styles %}
 {{ super() }}
-<div class="container">
-    <p class="read-text">
-        I'm Scott Corbat, a student at Michigan Technological University studying for Computer Science.  I created this
-        website as a summer project for both personal use and experience.  It features cloud storage which I can use for school
-        to transfer work between my laptop and desktop.  Every service is hosted on a server "box" I created myself.  It is a low 
-        budget computer that runs in my home and is maintained and developed through SSH.  Specs for this computer can be found on 
-        the <a href="about" class="read-text">about</a> page, as well as each service I am currently hosting.
-    </p>
-    <hr>
+    <link rel="stylesheet" href="../static/assets/css/index.css">
+{% endblock %}
 
-    <h1 style="font-weight: bold; color:goldenrod">Other Projects</h1>
-    <h3>Voting Booth Application (HIDE)</h3>
-    <p class="read-text">
-        I joined HIDE during the spring semester of 2019 and chose to work on the Voting Booth team.  The project is to 
-        create a survey application for the Undergraduate Student Government (USG).  Currently I work on the frontend of 
-        the application, which utilizes HTML, CSS, and Flask-Bootstrap.  Our application uses the Django framework. Our code can be found on the
-        <a href="https://github.com/MTUHIDE/ask-meagain" class="read-text">HIDE GitHub.</a>
-    </p>
-    <hr>
+{% block content %}
 
-    <h3>Retro Gaming Console</h3>
-    <p class="read-text">
-        I used a Raspberry Pi Model 3B+ and installed an emulation software called RetroPie.  It can play anything from old 
-        arcade games such as Galaga, to N64 games.  It's portable thanks to the small size of Raspberry Pis, and has little 
-        cord hassle.  It only requires a power chord, HDMI, and any USB cables for controllers.
-    </p>
-    <hr>
-
-    <h3>Unity Video Game</h3>
-    <p class="read-text">
-        My final project in my high school C#/Video Game Development class was to create a game in the Unity engine.  I created 
-        a game where the player is a ball that has to roll through an obstacle course.  The game featured moving obstacles, 
-        powerups, and a timer to track the speed of completion.  It also had start and finish menus.
-    </p>
-    <hr>
-
-    <h3>Brawlhalla Legend Counter</h3>
-    <p class="read-text">
-        This project mainly served to teach myself JavaFX and how to save data to files in Java.  Brawlhalla is a fighting 
-        game I enjoy, and this program keeps track of how much I verse various characters.  It can also display the data in 
-        a pie chart.  The data can be saved to a file using Java's Serializable interface.  Source code can be found on my 
-        <a href="https://github.com/combateer3/Brawlhalla-Legend-Counter" class="read-text">GitHub</a>.
-    </p>
-    <hr>
+<div class="container intro">
+<p class="read-text">
+    I'm Scott Corbat, a student at Michigan Technological University studying for Computer Science.
+    I created this website as a summer project for both personal use and experience. It features cloud storage which I can use for school to transfer work between my laptop and desktop.
+    Every service is hosted on a server "box" I created myself. It is a low budget computer that runs in my home and is maintained and developed through SSH.
+    Specs for this computer can be found on the about page, as well as each service I am currently hosting.
+</p>
 </div>
+    <br><br>
+<div class="service-header">Services</div>
+
+<div class="card-container">
+    <a class="my-card nextcloud-card" href="https://cloud.scottcorbat.com">
+        <i class="fa fa-cloud fa-5x"></i>
+        <div class="card-title">Nextcloud</div>
+        <div>Nextcloud is a third-party cloud storage system.  As of now, accounts are made
+            by me personally.  Contact me if you need one.
+        </div>
+    </a>
+
+    <a class="my-card servers-card" href="mcserver">
+        <i class="fa fa-server fa-5x"></i>
+        <div class="card-title">Servers</div>
+        <div>
+            I host a few different servers for my friends and I to play on. Minecraft and ARK: Survival Evolved are
+            some examples.  They are hosted on the same server machine as this website.
+        </div>
+    </a>
+
+    <a class="my-card blog-card" href="blog">
+        <i class="fas fa-user-edit fa-5x"></i>
+        <div class="card-title">Blog</div>
+        <div>
+            Currently a WIP. Requires creation of an account, and right now I have some known database issues that
+            may prevent users from posting.
+        </div>
+    </a>
+</div>
+
+
+<div class="service-header">My Projects</div>
+<div class="card-container">
+    <a class="my-card about-card" href="about">
+        <i class="fa fa-info-circle fa-5x"></i>
+        <div class="card-title">About</div>
+        <div>
+            See more information about this website! The list of services it provides and the specifications
+            of the server it is run on.
+        </div>
+    </a>
+
+    <a class="my-card hide-card" href="https://github.com/MTUHIDE/ask-meagain">
+        <img class="hide-logo" src="../static/assets/images/HIDE_Logo.png" />
+        <div class="card-title">HIDE: Voting Booth</div>
+        <div>
+            I am a member of Michigan Tech's Humane Interface Design Enterprise (HIDE). I am on a team creating a survey
+            software for our Undergraduate Student Government (USG).
+        </div>
+    </a>
+
+    <!--a class="my-card blc-card" href="https://github.com/combateer3/Brawlhalla-Legend-Counter">
+        <i class="fab fa-java fa-5x"></i>
+        <div class="card-title">Brawlhalla Legend Counter</div>
+        <div>
+            A project I made when I was near the beginning of my coding journey.  Utilizes JavaFX and persistent
+            storage of data.
+        </div>
+    </a-->
+</div>
+
 {% endblock %}
